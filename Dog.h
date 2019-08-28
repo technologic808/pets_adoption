@@ -1,6 +1,6 @@
 #include"Pet.h"
-class Dog:private Pet{
-private:
+class Dog:protected Pet{
+protected:
   string breed;
   bool houseTrained;
 public:
