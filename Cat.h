@@ -1,18 +1,34 @@
+#ifndef CAT_H
+#define CAT_H
+
 #include"Pet.h"
-class Cat:protected Pet{
-protected:
-  string hairLength;
-  bool otherCats;
-public:
-  Cat();
-  Cat(string,string,char,string,bool);
 
-  void setHairLength(string);
-  string getHairLength();
+class Cat : public Pet{
+	private:
+  		string hairLength;
+  		bool otherCats;
+	public:
+		// Default Constructor
+  		Cat();
 
-  void setOtherCats(bool);
-  bool getOtherCats();
+		// Parametric Constructor
+  		Cat(string,bool);
+		
+		// Function to set hair length of cat
+  		void setHairLength(string);
 
-  void printInfo();
+		// Function to get hair length of cat
+  		string getHairLength();
+
+		// Function to set other cats parameter
+  		void setOtherCats(bool);
+
+		// Function to get other cats parameter
+  		bool getOtherCats();
+
+		// Function to print cat information
+  		void printInfo();
 
 };
+
+#endif

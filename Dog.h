@@ -1,18 +1,34 @@
+#ifndef DOG_H
+#define DOG_H
+
 #include"Pet.h"
-class Dog:protected Pet{
-protected:
-  string breed;
-  bool houseTrained;
-public:
-  Dog();
-  Dog(string,string,char,string,bool);
 
-  void setBreed(string);
-  string getBreed();
+class Dog : public Pet{
+	protected:
+  		string breed;
+  		bool houseTrained;
+	public:
+  		// Default Constructor
+		Dog();
 
-  void setTrained(bool);
-  bool getTrained();
+		// Parametric Constructor
+  		Dog(string,bool);
 
-  void printInfo();
+		// Function to set breed
+  		void setBreed(string);
+
+		// Function to get breed
+  		string getBreed();
+
+		// Function to set trained parameter
+  		void setTrained(bool);
+
+		// Function to get trained parameter
+  		bool getTrained();
+
+		// Function  to print dog information
+  		void printInfo();
 
 };
+
+#endif
