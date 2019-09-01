@@ -1,37 +1,37 @@
 #include "Dog.h"
+
+// Default Constructor
 Dog::Dog(){}
-Dog::Dog(string sz,string a,char gen,string b,bool ht)
-{
-  size = sz;
-  age = a;
-  gender = gen;
+
+// Parametric Constructor
+Dog::Dog(string b,bool ht){
   breed = b;
   houseTrained = ht;
 }
 
-void Dog::setBreed(string b)
-{
+// Function to set breed
+void Dog::setBreed(string b){
   breed = b;
 }
 
-string Dog::getBreed()
-{
+// Function to get breed
+string Dog::getBreed(){
   return breed;
 }
 
-void Dog::setTrained(bool t)
-{
+// Funtion to set trained parameter
+void Dog::setTrained(bool t){
   houseTrained = t;
 }
 
-bool Dog::getTrained()
-{
+// Function to get trained parameter
+bool Dog::getTrained(){
   return houseTrained;
 }
 
-
-void Dog::printInfo()
-{
-  cout<<"Breed: "<<breed<<endl;
-  cout<<"HouseTrained: "<<houseTrained<<endl;
+// Function to print dog information
+void Dog::printInfo(){
+	Pet::printInfo();
+  	cout<<"Breed: "<<breed<<endl;
+  	cout<<"HouseTrained: "<<houseTrained<<endl;
 }

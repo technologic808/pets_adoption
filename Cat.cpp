@@ -1,36 +1,38 @@
 #include "Cat.h"
+
+// Default Constructor
 Cat::Cat(){}
-Cat::Cat(string sz,string a,char gen,string h,bool ot)
-{
-  size = sz;
-  age = a;
-  gender = gen;
-  hairLength = h;
-  otherCats = ot;
+
+// Parametric Constructor
+Cat::Cat(string h,bool ot){
+  	hairLength = h;
+  	otherCats = ot;
 }
 
-void Cat::setHairLength(string h)
-{
-  hairLength = h;
+// Function to set hair length
+void Cat::setHairLength(string h){
+  	hairLength = h;
 }
 
-string Cat::getHairLength()
-{
-  return hairLength;
+// Function to get hair length 
+string Cat::getHairLength(){
+  	return hairLength;
 }
 
-void Cat::setOtherCats(bool ot)
-{
-  otherCats = ot;
+// Function to set other cats parameter
+void Cat::setOtherCats(bool ot){
+  	otherCats = ot;
 }
 
-bool Cat::getOtherCats()
-{
-  return otherCats;
+// Function to get other cats parameter
+bool Cat::getOtherCats(){
+  	return otherCats;
 }
 
+// Function to print cat information
 void Cat::printInfo()
 {
-  cout<<"Hair Length: "<<hairLength<<endl;
-  cout<<"Other Cats: "<<otherCats<<endl;
+	Pet::printInfo();
+ 	cout<<"Hair Length: "<<hairLength<<endl;
+  	cout<<"Other Cats: "<<otherCats<<endl;
 }
